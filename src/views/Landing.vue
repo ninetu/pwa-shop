@@ -1,25 +1,26 @@
 <template>
   <div class="main">
     <mu-content-block>
-      <pre>
-Use case:
-- This page will accessed from user's mobile phone
-- For "Shop admin", please visit "<router-link to="/shop">shop</router-link>"
-
-Step:
-1. Click "Profile" then register your self
-2. After login success, click "Change My Picture"
-- Selfie yourself to register face to system
-3. Click "shopping" then select item add to your cart
-- We use this step to simulation shopping in-store
-4. Click "checkout" to confirm your cart
-- The checkout data will be sent to cashier
-5. Cashier will ask you
-- give you a "recommder products"
-- ask you to "smile" to get a %discount coupon
-- the coupon will be availble in your account for sharing to your frieds or your next purchase
-        </pre>
+      
     </mu-content-block>
+
+    </mu-content-block>
+    <mu-card>
+      <mu-card-media title="Shop with Machine Learning">
+        <img src="/img/home.jpg" />
+      </mu-card-media>
+      <mu-card-text>
+        What you can do?
+        <ol></ol>
+        <li><b>Register</b> and <b>selfie</b> yourself at <router-link to="/profile">registration page</router-link></li>
+        <li>Visit our physical store and shopping!</li>
+        <li>At cashier will recognize you and give product recommender</li>
+      </mu-card-text>
+      <mu-card-actions>
+        <mu-raised-button primary fullWidth label="Register Account" to="/profile" />
+      </mu-card-actions>
+    </mu-card>
+
   </div>
 </template>
 
