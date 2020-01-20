@@ -103,23 +103,13 @@ export default {
         return index == self.indexOf(elem);
       });
 
-      // console.log('=======================uniqueItems')
-      console.log(uniqueItems);
-      // TODO: change post url to our recommender api
       axios
-        .post(`http://35.202.6.239/api/v1.0/post_recommendation/`, {
+        .post(`https://shopapi.nytu.net/api/v1.0/post_recommendation/`, {
           itemId: uniqueItems,
           group: this.selectGroup
         })
         .then(response => {
-          // console.log("====================response");
-          console.log(response);
 
-          // dummy data
-          // response = {
-          //   result: "success",
-          //   recommend_itemId: "36361"
-          // };
           // TODO: response.result
           if (response.data.result === "success") {
             this.recommendList = response.data.recommend_itemId;
